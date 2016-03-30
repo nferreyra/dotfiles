@@ -11,8 +11,6 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "${BASEDIR}"
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
-
 # Change shell for current user to zsh
 if [ ! "$SHELL" = "/bin/zsh" ]; then
       chsh -s /bin/zsh
@@ -30,4 +28,7 @@ fi
 #    ln -s ~/.dotfiles/settings/sublime \
 #      ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 #fi
+
+
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
 
