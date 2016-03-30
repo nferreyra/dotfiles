@@ -1,0 +1,22 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf: dots/work/tmux.conf
+    ~/.vimrc: dots/work/vimrc
+    ~/.zshrc: dots/work/zshrc
+    ~/.zshenv: dots/work/zshenv
+    ~/.zprofile: dots/work/zprofile
+    ~/.zlogin: dots/work/zlogin
+    ~/.gitconfig: settings/git/config
+    ~/.gitignore_global: settings/git/ignore
+    ~/.vim: settings/vim
+    ~/.zsh: settings/zsh
+    ~/.zplug: plugins/zplug
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+

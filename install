@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+set -e
+
+CONFIG="settings/install/work.conf.yaml"
+DOTBOT_DIR="dotbot"
+
+DOTBOT_BIN="bin/dotbot"
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+cd "${BASEDIR}"
+git submodule update --init --recursive "${DOTBOT_DIR}"
+
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+
+# Change shell for current user to zsh
+if [ ! "$SHELL" = "/bin/zsh" ]; then
+      chsh -s /bin/zsh
+fi
+
+if [ -f plugins/my-brew/my-brew.plugin.zsh ]; then
+    source plugins/my-brew/my-brew.plugin.zsh
+    brew-essentials
+fi
+
+## Do special to sync sublime settings on OS X
+#if [[ "$OSTYPE" =~ "darwin" ]]; then
+#    rm ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+#
+#    ln -s ~/.dotfiles/settings/sublime \
+#      ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+#fi
+
