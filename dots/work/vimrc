@@ -48,6 +48,7 @@ let g:airline_theme = 'gruvbox'
 
 " I don't want c to copy anything..
 noremap <silent> c "_c
+map <C-c> "+y<CR>"
 
 noremap <silent> Y y$
 nnoremap <leader>w :w<CR>
