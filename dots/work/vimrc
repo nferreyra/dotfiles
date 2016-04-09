@@ -29,8 +29,9 @@ endif
 let g:mapleader=" "
 set encoding=utf-8
 set ffs=unix,mac,dos
-set cc=81
-set textwidth=80
+set cc=121
+set textwidth=120
+set backspace=indent,eol,start
 
 autocmd BufWritePre * silent! :%s/\s\+$//e " i dont like trailing whitespaces
 

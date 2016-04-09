@@ -1,1 +1,5 @@
-
+plugins/zplug/.cache
+plugins/zplug/bin/
+plugins/zplug/repos/
+plugins/zplug/zcompdump
+vim/
