@@ -4,14 +4,14 @@ zplug "mafredri/zsh-async", nice:13
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
 zplug "zsh-users/zsh-completions", nice:11
 zplug "zsh-users/zsh-history-substring-search", nice:12
+zplug "zsh-users/zsh-autosuggestions"
 zplug "hoffi/zsh-theme-lambda"
 zplug "hoffi/zsh-git-aliases", if:"which git"
-zplug "sharat87/zsh-vim-mode"
 zplug "willghatch/zsh-saneopt"
 zplug "djui/alias-tips", nice:11
-zplug "caarlos0/zsh-mkc"
 zplug "Tarrasch/zsh-autoenv", nice:14
-zplug "rimraf/k", nice:15
+zplug "supercrabtree/k", nice:15
+zplug "junegunn/fzf"
 zplug "trapd00r/LS_COLORS", of:"LS_COLORS", as:command, nice:16
 zplug "~/.zsh", from:local, file:"*.zsh"
 

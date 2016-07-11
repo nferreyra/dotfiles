@@ -29,8 +29,9 @@ endif
 let g:mapleader=" "
 set encoding=utf-8
 set ffs=unix,mac,dos
-set cc=81
-set textwidth=80
+set cc=121
+set textwidth=120
+set backspace=indent,eol,start
 
 autocmd BufWritePre * silent! :%s/\s\+$//e " i dont like trailing whitespaces
 
@@ -47,6 +48,7 @@ let g:airline_theme = 'gruvbox'
 
 " I don't want c to copy anything..
 noremap <silent> c "_c
+map <C-c> "+y<CR>"
 
 noremap <silent> Y y$
 nnoremap <leader>w :w<CR>

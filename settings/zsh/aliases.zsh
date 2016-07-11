@@ -4,6 +4,12 @@ alias k='k -h'
 alias ll='ls -la'
 alias l.='ls -d .*'
 
+# Plugins
+source ~/.dotfiles/plugins/haste/haste.plugin.zsh
+alias vboxctl='~/.dotfiles/plugins/virtualbox/vbctl-v1.9.sh'
+alias dk='source ~/.dotfiles/plugins/docker/dockerstart.sh'
+alias drm='~/.dotfiles/plugins/docker/docker-rm.sh'
+
 # https://github.com/Nix-wie-weg/zsh-functions-and-aliases
 browse() { open $(eval ${1}) }
 alias branch_current='git rev-parse --abbrev-ref HEAD'
