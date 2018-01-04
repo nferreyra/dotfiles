@@ -27,3 +27,5 @@ zplug load
 export XDG_CONFIG_HOME="$HOME/.config"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source ~/Development/TPN/git/github/git-subrepo/.rc

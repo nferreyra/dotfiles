@@ -20,6 +20,8 @@ fi
 
 [ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 if [ "$(uname -s)" = "Darwin" ]; then
   eval $(gdircolors -b $HOME/.zplug/repos/trapd00r/LS_COLORS/LS_COLORS)
   alias ls="ls -G"
